@@ -1,0 +1,69 @@
+#Kilpkonnal on täisarvulised koordinaadid x ja y ning suund ["vasakule", "üles", "paremal", "alla"] ning käsklused edasi() ning keeraParemale().
+#Edasi-käskluse puhul liigub kilpkonn ühe koordinaadi järgi edasi, keeraParemale() keerab 90 kraadi paremale.
+#Koosta kilpkonna objekt ning näitprogramm tema töö katsetamiseks
+
+#Alamülesanded: 1. Koosta konstruktoriga kilpkonn, millele saab ette anda x ja y koordinaadi. 2. Lisa käsklus kilpkonna koordinaatide küsimiseks tekstina.
+
+class Kilpkonn:
+    suunad={
+            "vasakule": [-1, 0],
+            "yles": [0, 1],
+            "paremale": [1, 0],
+            "alla": [0, -1]
+            }
+    def __init__(self, ux, uy):
+        self.x=ux
+        self.y=uy
+        self.suund ="paremale"
+        
+    def keeraParemale(self):
+        sd=list(Kilpkonn.suunad.keys())
+        koht=sd.index(self.suund)
+        koht=(koht+1) % 4
+        self.suund=sd[koht]
+        
+    def keeraVasakule(self):
+        sd=list(Kilpkonn.suunad.keys())
+        koht=sd.index(self.suund)
+        koht=(koht-1) % 4
+        self.suund=sd[koht]
+        
+    def liigu(self,sammud):
+        #Sammud on string "e" (edasi) ja "p" (paremale) tähtedest
+        #Käskluse käivitamisel teeb kilpkonn kõik stringis etteantud sammud
+        for käsk in sammud:
+            if käsk == "e":
+                self.edasi()
+            elif käsk == "p":
+                self.keeraParemale()
+            elif käsk == "v":
+                self.keeraVasakule()
+        
+    def edasi(self):
+        self.x+=Kilpkonn.suunad[self.suund][0]
+        self.y+=Kilpkonn.suunad[self.suund][1]
+
+    def asukoht(self):
+        return str(self.x)+", "+str(self.y)+" "+self.suund
+    
+    def __str__(self):
+        return self.asukoht()
+    
+    
+    
+k1=Kilpkonn(3,7)
+print(k1.asukoht())
+k1.edasi()
+print(k1)
+k1.keeraParemale()
+print(k1)
+k1.edasi()
+print(k1)
+k1.keeraVasakule()
+print(k1)
+k1.keeraVasakule()
+print(k1)
+k1.keeraVasakule()
+print(k1)
+k1.liigu("eeeveeepeeeveeeveeepv")
+print(k1)
