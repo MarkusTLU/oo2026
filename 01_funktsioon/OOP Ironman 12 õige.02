@@ -1,0 +1,43 @@
+def küsi_aeg(ala_nimi):
+    aeg_input = input(f"Sisesta oma {ala_nimi} aeg minutites: ")
+    while not aeg_input.isdigit():
+        print("Vale sisestus! Palun sisesta aeg minutites.")
+        aeg_input = input(f"Sisesta oma {ala_nimi} aeg minutites: ")
+    return int(aeg_input)
+
+# Ajalimiidid minutites
+ujumise_limiit = 140
+ratta_limiit = 490
+jooksu_limiit = 390
+
+# UJUMINE
+ujumine = küsi_aeg("ujumise")
+
+if ujumine <= ujumise_limiit:
+
+    # RATTASÕIT
+    ratas = küsi_aeg("rattasõidu")
+
+    if ratas <= ratta_limiit:
+
+        # JOOKS
+        jooks = küsi_aeg("jooksu")
+
+        if jooks <= jooksu_limiit:
+
+            kogu_aeg = ujumine + ratas + jooks
+            tunnid = kogu_aeg // 60
+            minutid = kogu_aeg % 60
+
+            print("Jäid ilusti aja sisse!")
+            print("Sinu kogu aeg oli", tunnid, "tundi ja", minutid, "minutit.")
+            print("Palju õnne! Oled Ironman!")
+
+        else:
+            print("Seekord jooksu ajalimiiti ei jõudnud.")
+
+    else:
+        print("Seekord ratta ajalimiiti ei jõudnud.")
+
+else:
+    print("Seekord ujumise ajalimiiti ei jõudnud.")
