@@ -1,5 +1,3 @@
-import sys
-sys.stdout.reconfigure(encoding='utf-8')
 from abc import ABC, abstractmethod
 
 class Varavaloendaja(ABC):
