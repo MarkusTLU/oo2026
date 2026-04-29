@@ -1,0 +1,6 @@
+Väravad mängijate kaupa:
+  Saka: 3
+  Martinelli: 2
+  Jesus: 1
+
+Suurim väravatelööja: Saka (3 väravat)
