@@ -4,3 +4,25 @@ Suvepraktikal osalejatel on soovitav esitada lõik oma praktikatööst.
 Rühmas koostatud rakenduse korral peab esitajal olema suurema rakenduse hulgas omale lähedalt tuttav koodiosa. 
 
 Esitatud koodilõik ei pea pärast praktikatöö juures täpselt samal kujul sisse jääma. 
+
+1. mis on funktsioon
+	- miks hea
+	- miks halb
+2. mis on klass
+	- mis on private, protected, public
+	- staticmethod, instancemethod, classmethod
+3. mis on klassikomplekt
+	- 
+4. mis on liides
+	- annab klassidele kindlad meetodid, mida need peavad kasutama
+5. mis on testid
+	- testib, kas koodi osad töötavad
+	- 
+6. mis on alamklassid
+	- saab anda lisaatribuute
+	- saab anda erinevaid käitumisi
+	- saab kasutada peaklassi, kui alamklasse pole eraldi tarvis kasutada
+	- 
+7. mis on typescript
+	- plussid ja miinused
+	- JavaScript on dünaamiline ja typescript on staatiline (JavaScriptiga programm töötab seni kuni vigase koodi juurde jõuab, aga typescriptiga ei lähe üldse käima kui kuskil viga on)
