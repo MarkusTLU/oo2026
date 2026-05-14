@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="takisti6.js"></script>
+    <script>
+        let r1, r2;
+
+        function startPage() {
+            const canvas = document.getElementById("canvas1");
+            const g = canvas.getContext("2d");
+            g.font = "12px monospace";
+
+            r1 = new Resistor(10, g, 20, 220, 100);
+            r1.setU(0);
+
+            r2 = new Resistor(10, g, 20, 220, 260);
+            r2.setU(0);
+
+            document.getElementById("range_r1").value = r1.getR();
+            document.getElementById("range_u1").value = r1.getU();
+            document.getElementById("range_r2").value = r2.getR();
+            document.getElementById("range_u2").value = r2.getU();
+
+            updateLabels();
+        }
+
+        function updateLabels() {
+            document.getElementById("val_r1").textContent = document.getElementById("range_r1").value + " Ω";
+            document.getElementById("val_u1").textContent = document.getElementById("range_u1").value + " V";
+            document.getElementById("val_r2").textContent = document.getElementById("range_r2").value + " Ω";
+            document.getElementById("val_u2").textContent = document.getElementById("range_u2").value + " V";
+        }
+    </script>
+  </head>
+  <body onload="startPage()">
+    <canvas id="canvas1" width="260" height="350"></canvas>
+
+    <div class="controls">
+      <div class="group">
+        <h3>Takisti R1</h3>
+        <label>
+          Takistus
+          <input type="range" id="range_r1" min="1" max="100" step="1"
+            oninput="r1.setR(this.valueAsNumber); updateLabels()" />
+          <span class="val" id="val_r1">10 Ω</span>
+        </label>
+        <label>
+          Pinge
+          <input type="range" id="range_u1" min="0" max="12" step="1"
+            oninput="r1.setU(this.valueAsNumber); updateLabels()" />
+          <span class="val" id="val_u1">0 V</span>
+        </label>
+      </div>
+      <div class="group">
+        <h3>Takisti R2</h3>
+        <label>
+          Takistus
+          <input type="range" id="range_r2" min="1" max="100" step="1"
+            oninput="r2.setR(this.valueAsNumber); updateLabels()" />
+          <span class="val" id="val_r2">10 Ω</span>
+        </label>
+        <label>
+          Pinge
+          <input type="range" id="range_u2" min="0" max="12" step="1"
+            oninput="r2.setU(this.valueAsNumber); updateLabels()" />
+          <span class="val" id="val_u2">0 V</span>
+        </label>
+      </div>
+    </div>
+  </body>
+</html>
