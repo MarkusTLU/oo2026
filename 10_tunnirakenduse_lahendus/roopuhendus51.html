@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Graafiline rööpühendus</title>
+    <script src="roopuhendus51.js"></script>
+    <script>
+        let r1, r2, pc1;
+        function startPage() {
+            r1 = new Resistor(110);
+            r2 = new Resistor(220);
+            pc1 = new ParallelCircuit(canvas1.getContext("2d"), 50, 100);
+            pc1.push(r1);
+            pc1.push(r2);
+            pc1.setU(0);
+            range1.value = r1.getR();
+            range2.value = r2.getR();
+            range3.value = 0;
+            s1.innerText = r1.getR();
+            s2.innerText = r2.getR();
+            s3.innerText = 0;
+        }
+    </script>
+    <meta charset="utf-8">
+  </head>
+  <body onload="startPage()">
+      <canvas id="canvas1" width="400" height="250"></canvas><br/>
+      Takisti 1 (Ω):
+      <input type="range" id="range1" min="10" max="500"
+             oninput="r1.setR(this.valueAsNumber); s1.innerText=this.value;" />
+      <span id="s1"></span><br/>
+      Takisti 2 (Ω):
+      <input type="range" id="range2" min="10" max="500"
+             oninput="r2.setR(this.valueAsNumber); s2.innerText=this.value;" />
+      <span id="s2"></span><br/>
+      Pinge (V):
+      <input type="range" id="range3" min="0" max="12"
+             oninput="pc1.setU(this.valueAsNumber); s3.innerText=this.value;" />
+      <span id="s3"></span>
+  </body>
+</html>
