@@ -1,0 +1,21 @@
+Põhireegel:
+Mida suurem on temperatuuride vahe, seda kiiremini jahtub. Kaks korda suurem vahe = kaks korda kiirem jahtumine.
+Kolm vajalikku mõistet:
+
+Temperatuur (°C) = kannu või eseme soojus
+Välistemperatuur (°C) = keskkonna temperatuur, mille poole jahtutakse
+Temperatuuride vahe = kannu temperatuur miinus välistemperatuur
+
+Valemid:
+
+Koefitsient (mõõtmisest): k = deltaT / (vahe × aeg)
+Jahtumine: deltaT = vahe × k × aeg
+
+Näide (ülesande andmed: kelder 10°, kann 20°, 30s → 0,1°):
+
+Vahe = 20 - 10 = 10°
+Koefitsient: k = 0,1 / (10 × 30) = 0,000333
+60-kraadise kannu jahtumine 30s jooksul: (60 - 10) × 0,000333 × 30 = 0,5 kraadi
+
+Miks 60-kraadine kann jahtub kiiremini kui 20-kraadine?
+Sest vahe keskkonnaga on suurem — 50° vs 10°. Soojus "tahab" liikuda kuumemalt külmemale, ja mida suurem vahe, seda tugevam see "tung".
