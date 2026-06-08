@@ -1,0 +1,24 @@
+Kolm põhivahendit:
+
+U = Pinge (V) = surve, mis ajab voolu liikuma
+I = Vool (A) = kui palju elektrit läbi voolab
+R = Takistus (Ω) = kui palju vool pidurdub
+
+Kolm valemit:
+
+Ohmi seadus: I = U / R
+Võimsus: P = U * I
+Rööpühenduse kogutakistus: 1/R = 1/R1 + 1/R2
+
+Rööpühenduse kolm reeglit:
+
+Kõigil takistitel on sama pinge
+Vool jaguneb takistite vahel
+Kogutakistus on väiksem kui ükski üksik takisti — mida rohkem takisteid, seda rohkem teid voolul, seda väiksem kogutakistus
+
+Jalgratta näide (U = 4,5 V):
+
+Esituli (4,5 Ω): I = 1 A, P = 4,5 W
+Tagatuli (9 Ω): I = 0,5 A, P = 2,25 W
+Koguvõimsus = 6,75 W
+Kogutakistus = 3 Ω

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <title>Rööpühendus</title>
+</head>
+<body>
+    <h1>Rööpühendus</h1>
+
+    <label>Pinge (V): <input id="pinge" type="number" value="4.5"></label><br><br>
+    <label>Takisti 1 (Ω): <input id="r1" type="number" value="4.5"></label><br><br>
+    <label>Takisti 2 (Ω): <input id="r2" type="number" value="9"></label><br><br>
+
+    <button onclick="arvuta()">Arvuta</button>
+
+    <h2>Tulemused</h2>
+    <p>Takisti 1 võimsus: <span id="r1-power">-</span> W</p>
+    <p>Takisti 2 võimsus: <span id="r2-power">-</span> W</p>
+    <p>Koguvõimsus: <span id="total-power">-</span> W</p>
+    <p>Kogutakistus: <span id="total-resistance">-</span> Ω</p>
+
+    <script src="roopuhendus.js"></script>
+</body>
+</html>
